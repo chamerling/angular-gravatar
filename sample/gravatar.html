@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <body>
+
+    <div ng-controller="myController">
+      <h2>From mail</h2>
+      <img gravatar-src="{{email}}">
+      <h2>From md5</h2>
+      <img gravatar-src="{{md5}}">
+      <h2>From direct email</h2>
+      <img gravatar-src="christophe.hamerling@gmail.com">
+    </div>
+    <script src="../components/angular/angular.min.js"></script>
+    <script src="../src/md5.js"></script>
+    <script src="../build/angular-gravatar.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>

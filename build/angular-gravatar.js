@@ -59,11 +59,11 @@ angular.module('ui.gravatar', ['md5']).provider('gravatarService', [
         var opts;
         opts = filterKeys('gravatar', attrs);
         delete opts['src'];
-        return scope.$watch(attrs.gravatarSrc, function(src) {
+        return scope.$watch('gravatar-src', function(src) {
           if (src == null) {
             return;
           }
-          return element.attr('src', gravatarService.url(src, opts));
+          return element.attr('src', gravatarService.url(element.attr('gravatar-src'), opts));
         });
       }
     };

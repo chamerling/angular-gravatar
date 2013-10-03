@@ -2,3 +2,6 @@
 /components
 /node_modules
 /coverage
+.idea
+/build/spec
+/spec/tests.js

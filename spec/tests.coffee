@@ -5,11 +5,14 @@ describe 'Directive: gravatarSrc', ->
   element = {}
 
   it 'should set the src attribute with Gravatar URL', inject ($rootScope, $compile) ->
-    $rootScope.email = "test@example.com"
+    email = 'christophe.hamerling@gmail.com'
+    md5email = 'b6c497af6bc43da74f94095683908ca7'
+    $rootScope.email = email
     element = angular.element '<img gravatar-src="email">'
     element = $compile(element) $rootScope
     $rootScope.$apply()
     expect(element.attr('src')).toBeTruthy()
+    expect(element.attr('src')).toBe 'http://www.gravatar.com/avatar/' + md5email
 
 describe 'Service: gravatarService', ->
   beforeEach module 'ui.gravatar'
