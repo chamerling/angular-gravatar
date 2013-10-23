@@ -1,6 +1,8 @@
 angular-gravatar
 ==============
 
+test
+
 Angular.JS directive for [Gravatar](http://www.gravatar.com).
 
 Copyright (C) 2013, Sebastian Wallin <sebastian.wallin@gmail.com>
